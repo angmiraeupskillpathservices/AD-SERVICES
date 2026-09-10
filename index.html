@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngMiraeup Skillpath - Join Now</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background: #f0f2f5; padding: 10px; margin: 0; }
+        .card { background: white; padding: 20px; border-radius: 20px; max-width: 450px; margin: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .work-highlight { background: #007bff; color: white; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; margin-bottom: 15px; font-size: 1.1rem; }
+        .details-box { background: #fffdf0; border: 2px dashed #f39c12; padding: 15px; border-radius: 10px; color: #d35400; font-weight: bold; margin-bottom: 20px; font-size: 14px; }
+        .radio-group { margin: 15px 0; padding: 10px; background: #f9f9f9; border-radius: 10px; font-weight: bold; }
+        .btn-join { width: 100%; padding: 15px; background: #25d366; color: white; border: none; border-radius: 10px; font-weight: bold; font-size: 18px; cursor: pointer; }
+        #popup-review { position: fixed; bottom: 20px; left: 10px; right: 10px; background: #333; color: white; padding: 10px; border-radius: 10px; display: none; text-align: center; font-size: 14px; z-index: 1000; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2 style="text-align:center;"> Company Name:-AngMiraeup Skillpath🏡</h2>
+    
+    <div class="work-highlight">WORK TYPE: TYPING & CAPTCHA WORK</div>
+
+    <div style="font-size: 14px; line-height: 1.8; font-weight: bold; color: #333;">
+        ✅ RATE: ₹5 PER CAPTCHA | ₹50 PER PAGE TYPING<br>
+        ✅ DAILY INSTANT PAYOUTS (₹1000-2000 DAILY)<br>
+        ✅ PART TIME (1-4 HOURS) | NO ANY TARGET<br>
+        ✅ NO ANY REGISTRATION FEE (100% FREE)<br>
+        ✅ WORK FROM ANYWHERE | MOBILE IS ENOUGH
+    </div>
+
+    <div class="details-box">
+        IF INTERESTED TO JOIN:<br>
+        SEND YOUR NAME, MOBILE NUMBER, AADHAR NUMBER, PAN NUMBER, ACCOUNT NUMBER, IFSC ON WHATSAPP.<br>
+        AFTER PROCESS, I WILL GUIDE YOU FREE OF COST.
+    </div>
+
+    <div class="radio-group">
+        DO YOU HAVE PAN CARD?<br>
+        <input type="radio" name="pan" value="yes"> YES &nbsp; <input type="radio" name="pan" value="no"> NO
+    </div>
+
+    <div class="radio-group">
+        DO YOU HAVE AADHAR LINK NUMBER?<br>
+        <input type="radio" name="aadhar" value="yes"> YES &nbsp; <input type="radio" name="aadhar" value="no"> NO
+    </div>
+
+    <button class="btn-join" onclick="check()">JOIN NOW ON WHATSAPP</button>
+
+    <h3 style="text-align:center; margin-top:20px;">WORK DEMO VIDEO</h3>
+    <!-- Video Auto-play, Mute, Loop -->
+    <video width="100%" autoplay muted loop playsinline>
+        <source src="demo.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="popup-review"></div>
+
+<script>
+function check() {
+    let pan = document.querySelector('input[name="pan"]:checked');
+    let aadhar = document.querySelector('input[name="aadhar"]:checked');
+
+    if (!pan || !aadhar) {
+        alert("PLEASE SELECT YES OR NO FOR ALL QUESTIONS!");
+        return;
+    }
+
+    if (pan.value === "yes" && aadhar.value === "yes") {
+        window.location.href = "https://wa.me/919661493415?text=I AM INTERESTED IN ANGMIRAEUP SKILLPATH. PLEASE GUIDE ME FURTHER.";
+    } else {
+        alert("SORRY! YOU ARE NOT ELIGIBLE. ONLY ELIGIBLE CANDIDATE CAN JOIN. PLEASE DO NOT CONTACT.");
+    }
+}
+
+// Review Popup Logic
+const reviews = ["Sumithra from Madurai just joined!", "Anitha from Coimbatore just joined!", "Karthik from Chennai just joined!", "Lakshmi from Salem just joined!"];
+setInterval(() => {
+    let popup = document.getElementById("popup-review");
+    popup.innerHTML = "🔔 " + reviews[Math.floor(Math.random() * reviews.length)];
+    popup.style.display = "block";
+    setTimeout(() => { popup.style.display = "none"; }, 3000);
+}, 5000);
+</script>
+</body>
+</html>
