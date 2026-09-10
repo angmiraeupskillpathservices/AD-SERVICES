@@ -11,13 +11,12 @@
         .details-box { background: #fffdf0; border: 2px dashed #f39c12; padding: 15px; border-radius: 10px; color: #d35400; font-weight: bold; margin-bottom: 20px; font-size: 14px; }
         .radio-group { margin: 15px 0; padding: 10px; background: #f9f9f9; border-radius: 10px; font-weight: bold; }
         .btn-join { width: 100%; padding: 15px; background: #25d366; color: white; border: none; border-radius: 10px; font-weight: bold; font-size: 18px; cursor: pointer; }
-        #popup-review { position: fixed; bottom: 20px; left: 10px; right: 10px; background: #333; color: white; padding: 10px; border-radius: 10px; display: none; text-align: center; font-size: 14px; z-index: 1000; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h2 style="text-align:center;">AngMiraeup Skillpath 🏡</h2>
+    <h2 style="text-align:center;">AngMiraeup Skillpath</h2>
     
     <div class="work-highlight">WORK TYPE: TYPING & CAPTCHA</div>
 
@@ -30,7 +29,7 @@
     </div>
 
     <div class="details-box">
-        IF INTERESTED TO JOIN👇:<br>
+        IF INTERESTED TO JOIN:<br>
         SEND YOUR NAME, MOBILE NUMBER, AADHAR NUMBER, PAN NUMBER, ACCOUNT NUMBER, IFSC ON WHATSAPP.<br>
         AFTER PROCESS, I WILL GUIDE YOU
     </div>
@@ -48,13 +47,10 @@
     <button class="btn-join" onclick="check()">JOIN NOW ON WHATSAPP</button>
 
     <h3 style="text-align:center; margin-top:20px;">WORK DEMO VIDEO</h3>
-    <!-- Video Auto-play, Mute, Loop -->
     <video width="100%" autoplay muted loop playsinline>
         <source src="demo.mp4" type="video/mp4">
     </video>
 </div>
-
-<div id="popup-review"></div>
 
 <script>
 function check() {
@@ -67,12 +63,12 @@ function check() {
     }
 
     if (pan.value === "yes" && aadhar.value === "yes") {
-        window.location.href ="https://wa.me/919661493415?text=I AM INTERESTED IN ANGMIRAEUP SKILLPATH. PLEASE GUIDE ME FURTHER.";
+        // अपना नंबर यहाँ डालें (91 के साथ)
+        window.location.href = "https://wa.me/919661493415?text=I AM INTERESTED IN ANGMIRAEUP SKILLPATH. PLEASE GUIDE ME FURTHER.";
     } else {
         alert("SORRY! YOU ARE NOT ELIGIBLE. ONLY ELIGIBLE CANDIDATE CAN JOIN. PLEASE DO NOT CONTACT.");
     }
 }
-
-
+</script>
 </body>
 </html>
