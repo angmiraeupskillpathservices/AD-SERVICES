@@ -16,8 +16,38 @@
 </head>
 <body>
 
+<div id="popup-review"></div>
+
+<script>
+function check() {
+    let pan = document.querySelector('input[name="pan"]:checked');
+    let aadhar = document.querySelector('input[name="aadhar"]:checked');
+
+    if (!pan || !aadhar) {
+        alert("PLEASE SELECT YES OR NO FOR ALL QUESTIONS!");
+        return;
+    }
+
+    if (pan.value === "yes" && aadhar.value === "yes") {
+        window.location.href = "https://wa.me/919661493415?text=I AM INTERESTED IN ANGMIRAEUP SKILLPATH. PLEASE GUIDE ME FURTHER.";
+    } else {
+        alert("SORRY! YOU ARE NOT ELIGIBLE. ONLY ELIGIBLE CANDIDATE CAN JOIN. PLEASE DO NOT CONTACT.");
+    }
+}
+
+// Review Popup Logic
+const reviews = ["Sumithra from Madurai just joined!", "Anitha from Coimbatore just joined!", "Karthik from Chennai just joined!", "Lakshmi from Salem just joined!"];
+setInterval(() => {
+    let popup = document.getElementById("popup-review");
+    popup.innerHTML = "🔔 " + reviews[Math.floor(Math.random() * reviews.length)];
+    popup.style.display = "block";
+    setTimeout(() => { popup.style.display = "none"; }, 3000);
+}, 5000);
+</script>
+
+    
 <div class="card">
-    <h2 style="text-align:center;"> Company:-AngMiraeup Skillpath🏡</h2>
+    <h2 style="text-align:center;">AngMiraeup Skillpath</h2>
     
     <div class="work-highlight">WORK TYPE: TYPING & CAPTCHA</div>
 
@@ -54,34 +84,6 @@
     </video>
 </div>
 
-<div id="popup-review"></div>
-
-<script>
-function check() {
-    let pan = document.querySelector('input[name="pan"]:checked');
-    let aadhar = document.querySelector('input[name="aadhar"]:checked');
-
-    if (!pan || !aadhar) {
-        alert("PLEASE SELECT YES OR NO FOR ALL QUESTIONS!");
-        return;
-    }
-
-    if (pan.value === "yes" && aadhar.value === "yes") {
-        window.location.href = "https://wa.me/919661493415?text=I AM INTERESTED IN ANGMIRAEUP SKILLPATH. PLEASE GUIDE ME FURTHER.";
-    } else {
-        alert("SORRY! YOU ARE NOT ELIGIBLE. ONLY ELIGIBLE CANDIDATE CAN JOIN. PLEASE DO NOT CONTACT.");
-    }
-}
-
-// Review Popup Logic
-const reviews = ["Sumithra from Madurai just joined!", "Anitha from Coimbatore just joined!", "Karthik from Chennai just joined!", "Lakshmi from Salem just joined!"];
-setInterval(() => {
-    let popup = document.getElementById("popup-review");
-    popup.innerHTML = "🔔 " + reviews[Math.floor(Math.random() * reviews.length)];
-    popup.style.display = "block";
-    setTimeout(() => { popup.style.display = "none"; }, 3000);
-}, 5000);
-</script>
 
      
 </body>
