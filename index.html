@@ -79,6 +79,21 @@
 
     <button class="btn-join" onclick="check()">JOIN NOW ON WHATSAPP</button>
 
+    <!-- Timer Code -->
+<div style="text-align: center; margin-top: 15px; font-weight: 700; color: #ef4444; font-family: sans-serif;">
+    ⚡ Slots closing in: <span id="my-timer">04:06</span> M
+</div>
+
+<script>
+    var sec = 246; 
+    setInterval(function(){
+        var m = Math.floor(sec / 60);
+        var s = sec % 60;
+        document.getElementById('my-timer').innerHTML = (m < 10 ? '0'+m : m) + ':' + (s < 10 ? '0'+s : s);
+        if(sec > 0) sec--;
+    }, 1000);
+</script>
+
     <h3 style="text-align:center; margin-top:20px;">WORK DEMO VIDEO</h3>
     <video width="100%" autoplay muted loop playsinline>
         <source src="demo.mp4" type="video/mp4">
