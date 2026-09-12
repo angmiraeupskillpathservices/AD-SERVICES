@@ -12,6 +12,20 @@
         .radio-group { margin: 15px 0; padding: 10px; background: #f9f9f9; border-radius: 10px; font-weight: bold; }
         .btn-join { width: 100%; padding: 15px; background: #25d366; color: white; border: none; border-radius: 10px; font-weight: bold; font-size: 18px; cursor: pointer; }
     </style>
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  
+  fbq('init', ' 1851430376271699'); // Yahan apni Pixel ID daalein
+  fbq('track', 'PageView'); // Ye Page 2 ka View count karega
+</script>
+    
 </head>
 <!-- 280+ People Section -->
 <div style="background: #e0f2fe; padding: 12px; border-radius: 12px; border: 1px solid #bae6fd; margin-bottom: 20px; text-align: center; font-family: sans-serif;">
@@ -118,5 +132,21 @@ function check() {
     }
 }
 </script>
+<script>
+    // Apne button ka ID ya class yahan likhein (yahan maine 'btn' mana hai)
+    // Agar aapka button <button id="my-btn"> hai, toh querySelector mein '#my-btn' likhein
+    document.querySelector('button').addEventListener('click', function() {
+        let pan = document.querySelector('input[name="pan"]:checked');
+        let aadhar = document.querySelector('input[name="aadhar"]:checked');
+
+        // Sirf tabhi track kare jab user eligible ho (dono mein yes)
+        if (pan && aadhar && pan.value === "yes" && aadhar.value === "yes") {
+            // Meta Pixel Tracking
+            fbq('track', 'Lead');
+            console.log("Lead tracked!");
+        }
+    });
+</script>
+    
 </body>
 </html>
